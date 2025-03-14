@@ -1,0 +1,13 @@
+body{
+    background-color: aquamarine;
+}
+.main{
+    background-color: white;
+    margin: 10px;
+    width: 98%;
+}
+.title{
+    background-color: #d61b06;
+    color: white;
+    text-align: center;
+}
