@@ -7,9 +7,49 @@
 </head>
 <body>
 <div class="main">
+    <h1>Phần 1</h1>
     <h2 class="title">SỞ THÍCH CỦA BẠN</h2>
-    <label for="username">Họ và tên</label>
-    <input type="text" name="" id="">
+    <form action="" method="post"><label for="username">Họ và tên</label>
+        <input type="text" name="username" id="username"> <br> <br>
+        <label for="email">Email:</label>
+        <input type="email" name="email" id="email">
+        <br><br>
+        <label for="hobby">Sở thích</label>
+        <input type="checkbox" name="sport" id="hobby"> Thể thao
+        <input type="checkbox" name="music" id="hobby"> Âm nhạc
+        <input type="checkbox" name="read" id="hobby"> Đọc sách <br>
+        <input type="checkbox" name="surf" id="hobby"> Lướt web
+        <input type="checkbox" name="play" id="hobby"> Chơi game
+        <input type="checkbox" name="cinema" id="hobby"> Điện ảnh <br>
+        <input type="checkbox" name="travel" id="hobby"> Du lịch <br>
+        <input type="submit" value="Gửi thông tin">
+        <input type="reset" value="Nhập lại"></form>
+    <hr>
+    <h1>Phần 2</h1>
+<h2>Đăng ký học viên</h2>
+    <form action="" method="post">
+        <label for="username2">Học và tên</label>
+        <input type="text" name="username" id="2"> <br> <br>
+        <label for="birth">Ngày sinh</label>
+        <input type="text" name="birth" id="birth"> <br> <br>
+        <label for="gender">Giới tính</label>
+        <input type="radio" name="male" id="gender">Nam
+        <input type="radio" name="female" id="gender">Nữ <br> <br>
+        <label for="address">Địa chỉ</label>
+        <textarea name="diachi" id="address" cols="10" rows="5"></textarea> <br> <br>
+        <label for="class">Lớp</label>
+        <select name="class" id="class">
+            <option value="--Chọn lớp--">Chọn lớp</option>
+            <option value=""></option>
+            <option value=""></option>
+        </select> <br><br>
+        <label for="email">Email </label>
+            <input type="email" name="email" id="email">
+        <label for="telephone">Số điện thoại</label>
+        <input type="tel" name="telephone" id="telephone"> <br> <br>
+        <input type="submit" value="Gửi thông tin">
+        <input type="reset" value="Nhập lại"></form>
+    </form>
 </div>
 </body>
 </html>

@@ -3,8 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+<!--  Cách 1- external: Nhúng tệp js từ bên ngoài-->
+  <script src="main.js"></script>
 </head>
 <body>
-
+<h1>Javascript overview</h1>
+<ul>
+  <li onmouseover="this.style.color='red'">External</li>
+  <li>Internal</li>
+  <li>Inline</li>
+</ul>
+<h1>Yêu anh không</h1>
+<!--<button onclick="alert('Lấy anh nhé')">Có</button>-->
+<!--<button style="position: relative" onmouseover="">Khhoong</button>-->
+<button onclick="alert('helloword');">Tải về</button>
+<!--Cách 2: Nhúng vo file HTML-->
+<script >
+  // alert("Xin chào thế giới !");
+  var name= prompt('Nhập tên của bạn:');
+  var age= prompt('Nhập tuổi của bạn:');
+  alert("xin chào" + name + " tuổi của bạn là: " + age);
+</script>
 </body>
 </html>
