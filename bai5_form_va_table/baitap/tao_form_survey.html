@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài tập tạo form survey</title>
+    <link rel="stylesheet" href="survey.css">
+</head>
+<body>
+<form action="" method="post">
+    <b><p>What is your age range?</p></b>
+    <select name="age" id="age" >
+        <option value="18-24">18-24</option>
+        <option value="25-34">25-34</option>
+        <option value="35-50">35-50</option>
+        <option value="50+">50+</option>
+    </select>
+
+    <b><p>What is your yearly income range?</p></b>
+    <select name="range" id="range" >
+        <option value="0-25000">0-25000</option>
+        <option value="25001-50000">25001-50000</option>
+        <option value="50001-100000">50001-100000</option>
+        <option value="100000+">100000+</option>
+    </select>
+
+    <b><p>Gender Identity</p></b>
+    <input type="radio" name="male" id="gender" >Male <br>
+    <input type="radio" name="female" id="gender" >Female <br>
+    <input type="radio" name="nonbinary" id="gender" >Nonbinary <br>
+    <input type="radio" name="other" id="gender" >Other <br>
+    <input type="text" name="" id=""> <br>
+
+    <b><p>Which of the following products have your purchased in the last 2 months. Please check all that apply</p></b>
+    <input type="checkbox" name="product1" id="product1"> Product 1 <br>
+    <input type="checkbox" name="product2" id="product2"> Product 2 <br>
+    <input type="checkbox" name="product3" id="product3"> Product 3 <br>
+    <b><p>How often would you use new product</p></b>
+    <input type="radio" name="daily" id="often">Daily <br>
+    <input type="radio" name="weekly" id="often">weekly <br>
+    <input type="radio" name="monthy" id="often">monthy <br>
+    <b><p>What would you pay for the new product?</p></b>
+    $ <input type="text" name="text" id="">- <input type="text" name="" id=""size="2">
+    <b><p>What features would you like to see in the new product</p></b>
+    <textarea cols="100" rows="5" name="" id=""></textarea>
+</form>
+</body>
+</html>
