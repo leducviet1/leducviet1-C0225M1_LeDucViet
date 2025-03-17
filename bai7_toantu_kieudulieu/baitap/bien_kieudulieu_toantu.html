@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài tập biến kiểu dữ liệu và toán tử</title>
+</head>
+<body>
+<script>
+    //Bài 1:
+    let inputVatLy= prompt("Nhập điểm vật lý:");
+    let inputHoaHoc= prompt("Nhập điểm hóa học:");
+    let inputSinhHoc= prompt("Nhập điểm sinh học:");
+    vatly=parseInt(inputVatLy);
+    hoaHoc=parseInt(inputHoaHoc);
+    sinhHoc=parseInt(inputSinhHoc);
+    let trungBinh = (vatly+hoaHoc+sinhHoc)/3;
+    document.write("Điểm trung bình:" + trungBinh);
+
+    //Bài 2:
+    var doC= prompt("Nhập nhiệt độ :")
+    var doF= (doC*9/5)+32;
+    document.write("Nhiet do F la:"+doF);
+
+    //Bài 3:
+    var banKinh = prompt("Nhap do dài bán kính:");
+    var dienTichHinhTron= banKinh*banKinh*3.14;
+    document.write("Diện tích hình tròn="+dienTichHinhTron);
+    //Bài 4: Tính chu vi
+    document.write("<br>");
+    var chuViHinhTron =  banKinh * 2 * 3.14;
+    document.write("Chu vi hình tròn ="+chuViHinhTron);
+</script>
+</body>
+</html>
