@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xác định size quần áo theo cân nặng</title>
+</head>
+<body>
+<script>
+    let m= +prompt('Nhập vào cân nặng của bạn');
+    if(isNaN(m)){
+        alert("Bạn đã nhập lỗi");
+    }else if(m<50){
+        document.write("Size của bạn là size: S");
+    }else if(m>=50 && m<=65){
+        document.write("Size của bạn là size: M");
+    }else if(m>=66 && m<=80){
+        document.write("Size của bạn là size :L");
+    }else {
+        document.write("SIze của bạn là size: XL");
+    }
+</script>
+</body>
+</html>
