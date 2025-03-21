@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài tập ứng dụng máy tính</title>
+</head>
+<body>
+<form action="">
+    <input type="text" name="st1" id="st1">
+    <input type="text" name="st2" id="st2">
+    <button type="button" onclick="add()" >Addition(+)</button>
+    <button type="button" onclick="subtraction()">Subtraction(-)</button>
+    <button type="button" onclick="multiplication()">Multiplication(x)</button>
+    <button type="button" onclick="division()">Division(/)</button>
+    <br> <p id="ketqua">Result:</p>
+</form>
+<script>
+    function add(){
+        let number1=+document.getElementById("st1").value;
+        let number2=+document.getElementById("st2").value;
+        let result = number1 + number2;
+        document.getElementById("ketqua").innerHTML = "Result:" + result;
+    }
+    function subtraction(){
+        let number1=document.getElementById("st1").value;
+        let number2=document.getElementById("st2").value;
+        let result = number1 - number2;
+        document.getElementById("ketqua").innerHTML = "Result:" +result;
+    }
+    function multiplication(){
+        let number1=document.getElementById("st1").value;
+        let number2=document.getElementById("st2").value;
+        let result = number1 * number2;
+        document.getElementById("ketqua").innerHTML ="Result:" + result;
+    }
+    function division(x){
+        let number1=document.getElementById("st1").value;
+        let number2=document.getElementById("st2").value;
+        let result = number1 / number2;
+        document.getElementById("ketqua").innerHTML ="Result:" + result;
+    }
+</script>
+</body>
+</html>
