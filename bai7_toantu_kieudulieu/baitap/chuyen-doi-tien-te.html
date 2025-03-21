@@ -7,19 +7,26 @@
 </head>
 <body>
 <form action="">
-    <label for="amount">Amount</label> <br>
-    <input type="text" name="amount" id="amount">
-    <label for="from">From Currency</label>
-    <select name="" id="from">
-        <option value="Vnd">VietNam</option>
-        <option value="Usd">USD</option>
-    </select>
-    <label for="to">To</label>
-    <select name="" id="to">
-        <option value="Vnd">VietNam</option>
-        <option value="Usd">USD</option>
-    </select>
-    <button onclick="changeMoney()">Convert</button>
+    <div>
+        <label for="amount">Amount</label> <br>
+        <input type="text" name="amount" id="amount">
+    </div>
+    <div>
+        <label for="from">From Currency</label>
+        <select name="" id="from">
+            <option value="Vnd">VietNam</option>
+            <option value="Usd">USD</option>
+        </select>
+    </div>
+    <div>
+        <label for="to">To</label>
+        <select name="" id="to">
+            <option value="Vnd">VietNam</option>
+            <option value="Usd">USD</option>
+        </select>
+
+    </div>
+    <button type="button" onclick="changeMoney()">Convert</button>
     <br>
     <p id="result">Result:</p>
     <script>
