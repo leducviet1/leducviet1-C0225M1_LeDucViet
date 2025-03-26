@@ -1,10 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Máy tính đơn giản</title>
+    <style>
+
+    </style>
 </head>
 <body>
-$END$
+ <input type="text" id="text">
+<table border="1">
+    <tr>
+        <td><button onclick="addValue('1')">1</button></td>
+        <td><button onclick="addValue('2')">2</button></td>
+        <td><button onclick="addValue('3')">3</button></td>
+        <td><button onclick="addValue('+')">+</button></td>
+    </tr>
+    <tr>
+        <td><button onclick="addValue('4')">4</button></td>
+        <td><button onclick="addValue('5')">5</button></td>
+        <td><button onclick="addValue('6')">6</button></td>
+        <td><button onclick="addValue('-')">-</button></td>
+    </tr>
+    <tr>
+        <td><button onclick="addValue('7')">7</button></td>
+        <td><button onclick="addValue('8')">8</button></td>
+        <td><button onclick="addValue('9')">9</button></td>
+        <td><button onclick="addValue('*')">*</button></td>
+    </tr>
+    <tr>
+        <td><button onclick="clearText()">C</button></td>
+        <td><button onclick="addValue('0')">0</button></td>
+        <td><button onclick="result()">=</button></td>
+        <td><button onclick="addValue('/')">/</button></td>
+    </tr>
+</table>
+ <script>
+     let text = document.getElementById("text");
+     function addValue(value){
+         text.value += value; //Thêm value vào ô text
+     }
+     function result(){
+         let result = eval(text.value);
+         text.value = result;
+         //Eval tính toán các phép toán hiện có trong chuỗi
+         //hiện kết quả ra ô text
+     }
+     function clearText(){
+         text.value = "";
+     }
+ </script>
 </body>
 </html>
