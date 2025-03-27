@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // bài 1:
+    /*
+    let a = +prompt("Nhập vào số a :");
+    let b = +prompt("Nhập vào số b :");
+    if (a%b==0){
+        alert("a chia hết cho b");
+    }else{
+        alert("a không chia hết cho b");
+    }
+    //bài 2:
+    let age = +prompt("Nhập vào tuổi của bạn:");
+    if(age>=15){
+        document.write("Bạn đủ điều kiện vào học lớp 10");
+    }else {
+        document.write("Bạn không đủ điều kiện vào học lớp 10");
+    }
+    //bai 3:
+    let number = +prompt("Enter a number");
+    if(number>0){
+        document.write("Số đó lớn hơn 0");
+    }else if(number==0){
+        document.write("đây là số 0");
+    }else {
+        document.write("Số đó nhỏ hơn 0");
+    }
+    //bài 4:
+    let so1 = +prompt("nhập vào số thứ nhất");
+    let so2 = +prompt("Nhập vào số thứ hai");
+    let so3 = +prompt("Nhập vào số thứ ba");
+    let max = so1;
+    if(so2 > max){
+        max = so2;
+    }else if(so3 > max){
+        max = so3;
+    }
+    document.write("Số lớn nhất là:" + max); */
+    //bài 5:
+    let diemKiemTra = +prompt("Nhập vào điểm kiểm tra của bạn");
+    let diemGiuaKy = +prompt("Nhập vào điểm giữa kì của bạn");
+    let diemHocKi = +prompt("Nhập vào điểm học kì của bạn");
+    let average = (diemKiemTra+diemGiuaKy+diemHocKi)/3;
+    if(average >= 8.5){
+        document.write("Bạn đạt học lực giỏi");
+    }else if(average >=6.5){
+        document.write("Bạn đạt học lực khá");
+    }else if(average >=5.0){
+        document.write("Bạn đạt học lực trung bình");
+    }else{
+        document.write("Bạn đạt học lực yếu");
+    }
+</script>
+
+
+</body>
+</html>
