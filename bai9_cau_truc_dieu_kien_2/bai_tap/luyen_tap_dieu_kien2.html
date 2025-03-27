@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //bài 1:
+    // let doC = +prompt("Nhập vào nhiệt độ :");
+    // let doF = doC * 9/5 + 32
+    // document.write(doF);
+    // //bài 2:
+    // let met = +prompt("Nhập vào độ dài");
+    // let feet = met* 3.2808;
+    // document.write(`${feet}`);
+    // //bài 3:
+    // let canhHinhVuong = +prompt("Nhập vào cạnh a:");
+    // let dienTich = canhHinhVuong * canhHinhVuong;
+    // document.write(`${dienTich}`);
+    // // bafi4:
+    // let chieuDai = +prompt("Nhập vào cạnh a:");
+    // let chieuRong = +prompt("Nhập vào cạnh b:");
+    // let dienTichHinhChuNhat = chieuDai * chieuRong;
+    // document.write(`${dienTichHinhChuNhat}`);
+    // // bafi5:
+    // let canhA = +prompt("Nhập vào cạnh a");
+    // let canhB = +prompt("Nhập vào cạnh b");
+    // let dienTichTamGiacVuong = (canhA * canhB)/2;
+    // document.write(`${dienTichTamGiacVuong}`);
+    // bài 6:
+    // let a = +prompt("Nhập vào a: ");
+    // let b = +prompt("Nhập vào hệ số b:");
+    // let x;
+    // if (a == 0) {
+    //     if (b == 0) {
+    //         document.write("Phương trình có vô số nghiệm");
+    //     } else {
+    //         x = b;
+    //         document.write("nghiệm của phương trình là: " + x);
+    //     }
+    // } else {
+    //     x = -b / a;
+    //     document.write("nghiệm của phương trình là: " + x);
+    // }
+    //bài 7
+    // let a = +prompt("Nhập vào hệ số a:");
+    // let b = +prompt("Nhập vào hệ số b:");
+    // let c = +prompt("Nhập vào hệ số c:");
+    // let x;
+    // if(a==0){
+    //     if(b==0){
+    //         if(c==0){
+    //             document.write("Phương trình có vô số nghiệm");
+    //         }else{
+    //             document.write("Nghiệm của phương trình là:" + c );
+    //         }
+    //     }else{
+    //         document.write("Nghiệm của phương trình là:" + (x=-c/b));
+    //     }
+    // }else{
+    //     let denta = b*b - 4*a*c;
+    //     if(denta == 0){
+    //      document.write("Phương trình có nghiệm kép:" + (x=-b/(2*a)));
+    //     }else if(denta <0){
+    //         document.write("Phương trình vô nghiệm");
+    //     }else{
+    //         document.write("Nghiệm thứ nhất của phương trình là:" + (x=(-b+Math.sqrt(denta))/(2*a)));
+    //         document.write("Nghiệm thứ hai của phương trình là:" + (x=(-b-Math.sqrt(denta))/(2*a)));
+    //     }
+    // }
+    //bài 8:
+    // let age = parseInt(prompt("Nhập vào tuổi:"));
+    // if (age < 120 && age > 0) {
+    //     document.write("Đây là tuổi của một người");
+    // } else {
+    //     document.write("đây k phải tuổi của một người");
+    // }
+    //bài 9:
+    let canhA = +prompt("Nhập vào cạnh a:");
+    let canhB = +prompt("Nhập vào cạnh b:");
+    let canhC = +prompt("Nhập vào cạnh c:");
+    if(canhA>0&&canhB>0&&canhC>0){
+        if(canhA+canhB>canhC||canhB+canhC>canhA||canhC+canhA>canhB){
+            document.write("Đây là 3 cạnh của một tam giác ");
+        }else {
+            document.write("đây k phải 3 cạnh của một tam giác");
+        }
+    }else{
+        document.write("đây k phải 3 cạnh của một tam giác");
+    }
+    //bài 10:
+</script>
+</body>
+</html>
