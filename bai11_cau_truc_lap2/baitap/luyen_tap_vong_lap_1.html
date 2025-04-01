@@ -1,10 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+    // Bài 1:
+    // for(let i = 1; i <=100 ; i++){
+    //     document.write(i +"<br>");
+    //     if(i==99){
+    //         alert("Đã hoàn thành");
+    //         break;
+    //     }
+    // }
+    // Bài 2:
+    // let nhietDo = +prompt("Nhập vào nhiệt độ:");
+    // while(nhietDo > 100){
+    //     alert("Giảm nhiệt độ xuống");
+    //     break;
+    // }
+    // while(nhietDo < 20){
+    //     alert("Tang nhiệt độ lên");
+    //     break;
+    // }
+    // // Bài 3: Fibonacci
+    // let fibonacci = [0,1];
+    // let i = 2;
+    // while (i<20){
+    //     fibonacci[i]=fibonacci[i-1]+fibonacci[i-2];
+    //     i++;
+    // }
+    // document.write(fibonacci + "<br>");
+    //Bài 4:
+    // let fibonacci = [0,1];
+    // let i = 2;
+    // while (i<20){
+    //     fibonacci[i]=fibonacci[i-1]+fibonacci[i-2];
+    //     if(fibonacci[i]%5==0){
+    //         document.write(fibonacci[i]);
+    //         break;
+    //     }
+    //     i++;
+    // }
+    //Bài 5:
+    // let fibonacci = [0,1];
+    // let sum=1;
+    // let i = 2;
+    // while (i<20){
+    //     fibonacci[i]=fibonacci[i-1]+fibonacci[i-2];
+    //     sum += fibonacci[i];
+    //     i++;
+    // }
+    // document.write(sum);
+    //Bài 6:
+    // let sum = 0;
+    // let count = 0;
+    // for(let i=7; count<30; i+=7){
+    //     sum += i;
+    //     count++;
+    // }
+    // document.write("Tổng của 30 số chia hết cho 7 đầu tiên là :" + sum);
+    //Bài 7:
+    // for (let i = 1; i<=100;i++){
+    //     if(i % 3 == 0){
+    //         document.write("Fizz" + "<br>");
+    //         continue;
+    //     }else if(i % 5 == 0){
+    //         document.write("Buzz" + "<br>");
+    //         continue;
+    //     }else if(i % 5 == 0 && i % 3 == 0){
+    //         document.write("FizzBuzz" + "<br>");
+    //         continue;
+    //     }
+    //     document.write(i + "<br>")
+    // }
+</script>
+<button>
+    <button onclick="doanSo()">Chơi</button>
+</button>
+<script>
+function doanSo(){
+    let num = +prompt("Nhập vào khoảng muốn đoán:");
+    let num_random=Math.floor(Math.random()*num);
+    console.log(num_random);
+    let num_guess= +prompt("Nhập số bạn muốn đoán:");
+    let count = 0;
+    while (num_guess !== num_random){
+        count++;
+        if(count == 4){
+            alert("Bạn đã hết số lần đoán");
+            break;
+        }else if (num_guess < num_random){
+            alert("Số bạn đoán bé hơn");
+        }else if (num_guess > num_random){
+            alert("Số bạn đoán lớn hơn")
+        }
+        num_guess=+prompt("Nhập số bạn đoán");
+    }
+    if(count==4){
+        document.write("Bạn hết số lần đoán");
+    }else {
+        document.write("Bạn đã đoán đúng");
+    }
+}
+</script>
 </body>
 </html>
