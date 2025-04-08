@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input onchange="countVowels()" id="vowels">
+<div id="result">0</div>
+<script>
+    let array = Array.from(document.getElementById("vowels"));
+    let count = 0;
+    let char = "ueoaiUEOAI"
+    function countVowels() {
+        for (let i = 0; i <= array.length;i++){
+            if(array[i].includes(char)){
+                count++;
+            }
+        }
+        return count;
+    }
+    let result = document.getElementById("result").innerHTML=countVowels();
+</script>
+</body>
+</html>

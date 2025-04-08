@@ -1,0 +1,38 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+    </head>
+    <body id="body">
+<!--    <button onclick="clicktohere();">Chơi</button>-->
+<!--    <script>-->
+<!--        setInterval(clicktohere,10000);-->
+<!--        function clicktohere() {-->
+<!--            let body = document.getElementById("body");-->
+<!--            let red= Math.floor(Math.random()*256);-->
+<!--            let green= Math.floor(Math.random()*256);-->
+<!--            let blue= Math.floor(Math.random()*256);-->
+<!--            body.style.backgroundColor = `rgb(${red},${green},${blue})`;-->
+<!--        }-->
+<!--    </script>-->
+    <script>
+        let numbers = [12,15, 3, 2, 6, 8, 1, 8];
+
+        function findIndex(value) {
+            for(let i = 0; i < numbers.length; i++) {
+                if(numbers[i] == value) {
+                    return i;
+                }
+            }
+            return -1
+        }
+        let i = findIndex(15);
+        console.log(i);
+        let index = findIndex(30);
+        console.log(index);
+
+    </script>
+
+    </body>
+    </html>
