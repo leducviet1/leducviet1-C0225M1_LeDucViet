@@ -11,9 +11,13 @@
         if(answer ){
             result = "Excellent. We 'll play a nice game of chess!";
         }else{
-
+            result = "Maybe latter then.";
         }
+        return result;
     }
+    let confirmAnswer = confirm("Shall we play a game?");
+    let theAnswer = processConfirm(confirmAnswer);
+    alert(theAnswer);
 </script>
 </body>
 </html>
