@@ -5,8 +5,18 @@
     <title>Title</title>
 </head>
 <body>
+<p>
+    <label>Farenheit</label>
+    <input type="number" name="" id="inputFarenheit" placeholder="Farenheit"
+    oninput="temperatureConverter(this.value)"
+    onchange="temperatureConverter(this.value)">
+</p>
+<p>Celcius: <span id="outputCelcius"></span></p>
 <script>
-
+function temperatureConverter(valNum) {
+        valNum = parseFloat(valNum);
+        document.getElementById("outputCelcius").innerHTML = (valNum-32) / 1.8;
+}
 </script>
 </body>
 </html>
