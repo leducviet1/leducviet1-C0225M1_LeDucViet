@@ -7,11 +7,40 @@
 <body>
 <script>
     //Bài 1:
-    let myColor = ["Red","Green","White","Black"];
-    let result = myColor.join();
-    console.log(result);
+    // let myColor = ["Red","Green","White","Black"];
+    // let result = myColor.join();
+    // console.log(result);
     //Bài 2:
-
+    // let  number = "025468"
+    // let ketQua="";
+    // if (number.length > 0) {
+    //     ketQua += number[0];
+    //     for (let i = 1; i < number.length; i++) {
+    //         let soTruoc = parseInt(number[i - 1]);
+    //         let soHienTai = parseInt(number[i]);
+    //
+    //         if (soTruoc % 2 === 0 && soHienTai % 2 === 0) {
+    //             ketQua += '-' + number[i];
+    //         } else {
+    //             ketQua += number[i];
+    //         }
+    //     }
+    // }
+    // console.log(ketQua);
+    //Bai 3:
+    let chuoi = prompt("Nhập vào chuỗi")
+    let ketQua = '';
+    for (let i = 0; i < chuoi.length; i++) {
+        let kyTu = chuoi[i];
+        if (kyTu >= 'a' && kyTu <= 'z') {
+            ketQua += kyTu.toUpperCase();
+        } else if (kyTu >= 'A' && kyTu <= 'Z') {
+            ketQua += kyTu.toLowerCase();
+        } else {
+            ketQua += kyTu; // Giữ nguyên nếu không phải chữ cái
+        }
+    }
+    console.log(ketQua);
 </script>
 </body>
 </html>
