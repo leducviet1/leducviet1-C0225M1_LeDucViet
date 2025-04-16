@@ -5,13 +5,27 @@
     <title>Title</title>
 </head>
 <body>
-<form action="">
+<form action="" onsubmit="translateWord()">
     <label for="search">Nhập vào từ</label>
     <input type="text" name="search" id="search">
-    <button onclick="">Tìm kiếm</button>
-    <script>
-
-    </script>
+    <button onclick="translateWord()">Tìm kiếm</button>
+   <p id="result">Result</p>
 </form>
+<script>
+    let english=["house","horse","cat","mouse","dog"];
+    let vietnamese = ["ngôi nhà","con ngựa","con mèo","con chuột","con chó"];
+
+
+    function translateWord() {
+        let englishWord = document.getElementById("search").value.trim().toLowerCase();
+        let index = english.indexOf(englishWord);
+        let result = document.getElementById("result");
+        if(index !== -1){
+            result.innerHTML = "Result: " + vietnamese[index];
+        }else{
+            alert("Không có từ này trong bảng")
+        }
+    }
+</script>
 </body>
 </html>
