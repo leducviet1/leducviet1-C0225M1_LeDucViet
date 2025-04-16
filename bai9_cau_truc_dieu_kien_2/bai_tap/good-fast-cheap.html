@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ứng dụng good-fast cheap</title>
+</head>
+<body>
+<div><button id="btnGood" style="background-color: #d61b06" onclick="changeGood()">Good</button></div>
+<div><button id="btnFast" style="background-color: #d61b06" onclick="changeFast()">Fast</button></div>
+<div><button id="btnCheap" style="background-color: #d61b06" onclick="changeCheap()">Cheap</button></div>
+<script>
+    let isGood,isFast,isCheap = false;
+    function changeGood(){
+        isGood = !isGood;
+        if(isGood&&isFast){
+            isCheap = false;
+        }
+        updateButton()
+    }
+    function changeFast(){
+        isFast = !isFast;
+        if(isFast&&isCheap){
+            isGood = false;
+        }
+        updateButton()
+    }
+    function changeCheap(){
+        isCheap = !isCheap;
+        if(isCheap&&isGood){
+            isFast = false;
+        }
+        updateButton()
+    }
+    function updateButton(){
+        let btnGood = document.getElementById("btnGood");
+        let btnFast = document.getElementById("btnFast");
+        let btnCheap = document.getElementById("btnCheap");
+        if(isGood){
+            btnGood.style.backgroundColor = "green";
+        }else{
+            btnGood.style.backgroundColor = "red";
+        }
+        if(isFast){
+            btnFast.style.backgroundColor = "green";
+        }else {
+            btnFast.style.backgroundColor = "red";
+        }
+        if(isCheap){
+            btnCheap.style.backgroundColor = "green";
+        }else {
+            btnCheap.style.backgroundColor = "red";
+        }
+    }
+</script>
+</body>
+</html>
