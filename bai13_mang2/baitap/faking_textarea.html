@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Faking Typing</title>
+</head>
+<body>
+<center>
+    <h3>Type anything slowly</h3>
+    <form id="area">
+        <textarea name="txt" id="txt" cols="30" rows="10" onkeydown="changeArea()"></textarea>
+    </form>
+</center>
+<script>
+    var a = new Array(), n = "";
+    a[1] = 'T'; a[2] = 'Ô'; a[3] = 'I'; a[4] = ' '; a[5] = 'L'; a[6] = 'À';
+    a[7] = ' '; a[8] = 'M'; a[9] = 'Ộ'; a[10] = 'T'; a[11] = ' ';
+    a[12] = 'Đ'; a[13] = 'Ứ'; a[14] = 'A'; a[15] = ' '; a[16] = 'N';
+    a[17] = 'G'; a[18] = 'Ố'; a[19] = 'C'; a[20] = '!'; a[21] = '!'; a[22] = '!';
+
+    function changeArea() {
+        let txtArea = document.getElementById('txt');
+        let chuoi = txtArea.value;
+        let j = chuoi.length;
+        if (j > 0) {
+            for (let i = 1; i <= j; i++) {
+                n = n + a[i];
+                if (i == 22) {
+                    txtArea.value = "";
+                    n = "";
+                }
+            }
+        }
+        txtArea.value = n;
+        n = "";
+        setTimeout(changeArea, 1);
+    }
+</script>
+</body>
+</html>
