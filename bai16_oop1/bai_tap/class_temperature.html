@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function Temperature(doC) {
+        this.doC = doC;
+        this.doF = function() {
+            return 9/5 * this.doC + 32;
+        }
+        this.doK = function() {
+            return this.doC + 273.15;
+        }
+    }
+    let temperature = new Temperature(30);
+    let doFchuyendoi = temperature.doF();
+    let doKchuyendoi = temperature.doK();
+    document.write("Nhiệt độ K: " + doKchuyendoi + "<br>"
+        + "Nhiệt độ F: " + doFchuyendoi);
+</script>
+</body>
+</html>
