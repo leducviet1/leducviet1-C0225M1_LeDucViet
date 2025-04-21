@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    //Bài 1
+    let number = [3, 4, 8, 12, 15, 18, 23, 34, 45, 76];
+    let count = 0;
+    for (let i = 0; i < number.length; i++) {
+        if(number[i]>= 10){
+            count++;
+        }
+    }
+    document.write("Có " + count + " số lớn hơn 10");
+    //Bài 2
+    let number = [3, 4, 8, 12, 15, 18, 23, 34, 45, 76];
+    for (let i = 0; i < number.length; i++) {
+        max = number[0];
+        if(number[i] > max) {
+            max = number[i];
+            vitri = i;
+        }
+    }
+    document.write("Số lớn nhất là : "+ max + " ở vị trí " + vitri);
+    //Bài 3:
+    let number = [3, 4, 8, 12, 15, 18, 23, 34, 45, 76];
+    let sum = 0;
+    for (let i = 0; i < number.length; i++) {
+        sum += number[i];
+        max = number[0];
+        if(number[i] > max) {
+            max = number[i];
+        }
+    }
+    document.write("Số lớn nhất là : "+ max +"<br/>");
+    document.write("Giá trị trung bình là:" + (sum / number.length));
+    //Bài 4:
+    let arr=[4,5,6,7,8,10,11,12,13,14,15];
+    let mangNguoc = arr.reverse();
+    document.write(mangNguoc);
+    //Bai 5:
+    let arr = [-1, -2, -3, -4, -5, -6, 7, 8, 9];
+    let count = 0;
+    for (let i = 0; i < arr.length; i++) {
+        if(arr[i] <0){
+            count++;
+        }
+    }
+    document.write("Số các số nguyên âm trong mảng là: "+ count);
+    //bài 6:
+    let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 15];
+    let v = +prompt("Enter a number");
+    if(arr.includes(v)){
+        document.write("V is in the array")
+    }else{
+        document.write("V is not in the array")
+    }
+    //Bài 7:
+    let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+    let v = +prompt("Enter a number");
+    let index = arr.indexOf(v);
+    if (index === -1) {
+        alert("Không có số này");
+    } else {
+        for (let i = index; i <= arr.length - 1; i++) {
+            arr[i] = arr[i + 1];
+        }
+        arr[arr.length - 1] = 0;
+        document.write(arr);
+    }
+    //bài 8:
+    //bài 9:
+    let mangA = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+    let mangB = [-1, -2, -3, -4, -5, -6, -7, -8, -9, -10];
+    let mangC= mangA.concat(mangB);
+    document.write(mangC);
+</script>
+
+
+</body>
+</html>
