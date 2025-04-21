@@ -5,6 +5,30 @@
     <title>Title</title>
 </head>
 <body>
-
+<h2>Hình chữ nhật</h2>
+<canvas id="myCanvas" width="200" height="200" style="border:1px solid #000000;"></canvas>
+<script>
+function Rectangle(length,width){
+    this.length = length;
+    this.width = width;
+    this.area = function(){
+        return this.length * this.width;
+    }
+    this.perimeter = function(){
+        return (this.width + this.length)*2 ;
+    }
+    this.draw = function() {
+        const canvas = document.getElementById("myCanvas");
+        const ctx = canvas.getContext("2d");
+        ctx.clearRect(0, 0, canvas.width, canvas.height); // Xóa hình vẽ cũ
+        ctx.fillStyle = "#FF0000"; // Màu đỏ cho hình chữ nhật
+        ctx.fillRect(50, 50, this.length, this.width); // Vẽ hình chữ nhật
+    };
+}
+let rectangle = new Rectangle(150,100);
+rectangle.draw();
+document.write("Diện tích hình chữ nhật là:"+ rectangle.area() +"<br/>");
+document.write("Chu vi hình chu nhật là:"+ rectangle.perimeter());
+</script>
 </body>
 </html>
