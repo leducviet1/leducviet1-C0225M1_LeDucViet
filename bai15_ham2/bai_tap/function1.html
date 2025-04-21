@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body >
+<h2>Tìm Chòm Sao Tương Ứng</h2>
+<button onclick="layThongTin()">Tìm Chòm Sao</button>
+
+<script>
+    //bài 1:
+    function alertMessage(){
+        alert("xin chào bạn");
+    }
+    //bài 2:
+    function tangGiaTri(n){
+        return n+1;
+    }
+    let giaTri = 5;
+    let ketQua = tangGiaTri(giaTri);
+    console.log(ketQua);
+    //bài 3:
+    function kiemTra(soA,soB){
+        if(soA > soB){
+            alert(soA + " lớn hơn " + soB);
+        }else {
+            return soA+soB;
+        }
+    }
+    let ketQua2= kiemTra(1,3);
+    console.log(ketQua2);
+
+    //bài 4:
+    function addNumbers() {
+        firstNum = 4;
+        secondNum = 8;
+        result = firstNum + secondNum;
+        return result;
+    }
+    result = 0;
+    alert(result);
+    result = addNumbers();
+    alert(result);
+    //Bài 5:
+    let star = ["Polaris","Aldebaran","Deneb","Vega","Altair","Dubhe","Regulus"];
+    let chomStar=["Ursa Minor","Taurus", "Cygnus","Lyra","Aquila","Ursa Major","Leo"];
+    function compare(starName){
+        for(var i=0;i<star.length;i++){
+            if(star[i]==starName){
+                return chomStar[i];
+            }
+        }
+        return "Khoong tim thay ngoi sao"
+    }
+    function layThongTin(){
+        let starName = prompt("Enter a starName");
+        if(starName){
+            let ketQua = compare(starName);
+            alert(`Ngôi sao ${starName} thuộc chòm sao ${ketQua}`);
+        }else{
+            alert("Bạn chưa nhập tên ngôi sao.");
+        }
+    }
+</script>
+</body>
+</html>
