@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Management</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<h2>Add New Product</h2>
+<form onsubmit="createProduct(event)">
+  (required) <input type="text" name="productName" id="productName" placeholder="Enter your product name"
+                    required><br>
+  (required) <input type="number" name="productPrice" id="productPrice" placeholder="Price" required><br>
+  (optional) <textarea name="productDescription" id="productDescription" placeholder="Content"></textarea><br>
+  (required) <select name="productCategory" id="productCategory" required>
+  <option value="">--- Select category ---</option>
+  <option>Smartphone</option>
+  <option>Tablet</option>
+  <option>Smartwatch</option>
+  <option>TV</option>
+  <option>PC/Laptop</option>
+  <option>Google</option>
+</select><br>
+  <button type="submit" id="btnAdd">Add</button>
+</form>
+<h2>Display All Product</h2>
+<div class="heading">
+  <strong id="productCount">SL Products</strong>
+</div>
+<table>
+  <thead>
+  <tr>
+    <th>Product Name</th>
+    <th>Image</th>
+    <th>Price</th>
+    <th>Description</th>
+    <th>Category</th>
+    <th>Edit</th>
+    <th>Delete</th>
+  </tr>
+  </thead>
+  <tbody id="productList">
+  </tbody>
+</table>
+<script src="script.js"></script>
+</body>
+
+</html>
+</body>
+</html>

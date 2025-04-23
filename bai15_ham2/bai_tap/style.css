@@ -1,0 +1,52 @@
+button {
+    background-color: green;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+}
+
+button.delete {
+    background-color: red;
+}
+
+button.edit {
+    background-color: blue;
+}
+
+input,
+textarea,
+select {
+    padding: 6px 12px;
+    margin-bottom: 6px;
+}
+
+.heading {
+    display: flex;
+    justify-content: end;
+    padding: 6px;
+}
+
+.heading strong {
+    color: red;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+td,
+th {
+    padding: 6px 12px;
+    border: 1px solid black;
+}
+
+td:nth-child(2),
+td:nth-child(5),
+td:nth-child(6) {
+    text-align: center;
+}
+
+tr:nth-child(even) {
+    background-color: lightgray;
+}
