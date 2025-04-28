@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Quản Lý Phòng Khách Sạn</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+<h1>Quản Lý Phòng Khách Sạn</h1>
+<ul class="menu">
+    <li><button onclick="bookingRoom()">Đặt phòng <phòng></phòng></button></li>
+    <li><button onclick="addRoom()">Thêm phòng</button></li>
+    <li><button onclick="editRoom()">Sửa thông tin phòng</button></li>
+    <li><button onclick="deleteRoom()">Xóa thông tin phòng</button></li>
+</ul>
+<table>
+    <thead>
+    <tr>
+        <th>Số phòng</th>
+        <th>Hình ảnh phòng</th>
+        <th>Giá thuê</th>
+        <th>Số người</th>
+        <th>Đánh giá</th>
+        <th>Trạng thái</th>
+    </tr>
+    </thead>
+    <tbody id="room-list"></tbody>
+</table>
+
+
+<form id="booking-form" >
+    <h2>Đặt phòng</h2>
+    <select id="room-select">
+        <option value="">-- Chọn phòng --</option>
+    </select>
+    <input type="number" id="people" placeholder="Số người" min="1">
+    <button type="submit">Đặt phòng</button>
+</form>
+
+
+<form  id="add-room" >
+    <h2>Thêm phòng</h2>
+    <input type="text" name="room-id" id="room-id" placeholder="Nhập số phòng" required>
+    <input type="file" name="image" id="image-form" accept="image/*" required>
+    <input type="number" name="price" id="price" placeholder="Nhập giá phòng" min="800000" required>
+    <select name="rating" id="rating"  required>
+        <option value="" disabled selected>Chọn chất lượng</option>
+        <option value="high-end">High-end</option>
+        <option value="normal">Normal</option>
+    </select>
+    <select name="status" id="status" required>
+        <option value="" disabled selected>Chọn trạng thái</option>
+        <option value="available">Available</option>
+        <option value="booked">BOOKED</option>
+    </select>
+    <button type="submit">Thêm phòng</button>
+</form>
+
+
+<form action="" id="edit-room">
+    <h2>Sửa thông tin phòng</h2>
+    <input type="text" name="" id="edit-room-id" disabled>
+
+    <!-- Ảnh preview -->
+    <img id="edit-image-preview" src="" style="max-width: 200px; display: none;">
+
+    <input type="file" id="edit-image-form" accept="image/*">
+    <input type="number" id="edit-price" placeholder="Nhập giá phòng" min="800000" required>
+    <select id="edit-rating" required>
+        <option value="" disabled selected>Chọn chất lượng</option>
+        <option value="high-end">High-end</option>
+        <option value="normal">Normal</option>
+    </select>
+    <select id="edit-status" required>
+        <option value="" disabled selected>Chọn trạng thái</option>
+        <option value="available">Available</option>
+        <option value="booked">Booked</option>
+    </select>
+    <button type="submit" >Cập nhật phòng</button>
+</form>
+<script src="script.js"></script>
+</body>
